@@ -50,7 +50,12 @@ const questions = () => {
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if(err) throw err;
+        console.log('README has been created!')
+    })
+}
 
 // TODO: Create a function to initialize app
 function init() {
@@ -59,7 +64,10 @@ function init() {
             return generateMarkdown(input);
         })
         .then(markdown => {
-            console.log(markdown)
+            writeToFile('./dist/README.md', markdown);
+        })
+        .catch(err => {
+            console.log(err);
         })
 }
 
