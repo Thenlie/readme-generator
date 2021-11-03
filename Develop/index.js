@@ -41,7 +41,7 @@ const questions = () => {
         type: 'list',
         name: 'license',
         message: 'What is the license of your project?',
-        choices: ['MIT', 'ISC', 'Apache', 'GPL'],
+        choices: ['MIT', 'ISC', 'GNU LGPL', 'Unlicense', 'none'],
         default: 'MIT'
     }])
     .then(input => {
