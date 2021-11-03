@@ -25,7 +25,7 @@
 
   After using the `node script.js` command you will be given a number of prompts to answer. Once you answer these the `README.md` will be created in the `/dist` folder. This can be seen in the GIF below. 
 
-  ![Program Walkthrough GIF](https://github.com/Thenlie/readme-generator/tree/main/assets/videos/video-walkthrough.gif)  
+  ![Program Walkthrough GIF](https://github.com/Thenlie/readme-generator/blob/main/assets/videos/video-walkthrough.gif)  
   
   ## License
   
