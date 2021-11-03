@@ -1,11 +1,11 @@
 
-  # s
+  # README Generator
 
-  ![Project License Badge](https://img.shields.io/badge/license-MIT-brightgreen)
+  ![Project License Badge](https://img.shields.io/badge/license-ISC-brightgreen)
 
   ## Description
 
-  s
+  A simple NodeJS program that generates a professional README markdown file based on user input. Made during the U of U coding bootcamp.
 
   ## Table of Contents
 
@@ -20,57 +20,51 @@
 
   ## Installation
 
-  s
+  To run this program simply clone the repo from GitHub. Then use the command `npm i inquirer` to download the inquirer package. You are all set! Now you can run the program with the command `node index.js`.
 
   ## Usage
 
-  s
+  After using the `node script.js` command you will be given a number of prompts to answer. Once you answer these the `README.md` will be created in the `/dist` folder.
 
   
   ## License
   
   
-  > ### MIT License
+  > ### ISC License (ISC)
   > 
-  > Copyright (c) [2021] [s]
+  > Copyright [2021] [THenlie]
   > 
-  > __Permission is hereby granted, free of charge, to any person obtaining a copy__
-  > __of this software and associated documentation files (the "Software"), to deal__
-  > __in the Software without restriction, including without limitation the rights__
-  > __to use, copy, modify, merge, publish, distribute, sublicense, and/or sell__
-  > __copies of the Software, and to permit persons to whom the Software is__
-  > __furnished to do so, subject to the following conditions:__
+  > __Permission to use, copy, modify, and/or distribute this software for__
+  > __any purpose with or without fee is hereby granted, provided that the__ 
+  > __above copyright notice and this permission notice appear in all copies.__
   > 
-  > The above copyright notice and this permission notice shall be included in all
-  > copies or substantial portions of the Software.
-  > 
-  > THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  > IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  > FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  > AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  > LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  > OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  > SOFTWARE.
+  > THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES 
+  > WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF 
+  > MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR 
+  > ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES 
+  > WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN 
+  > ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF 
+  > OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
     
 
     
 
   ## Contributing
 
-  s
+  Feel free to fork this repo and make it your own! 
 
   ## Tests
 
-  s
+  N/A
   
   ## Questions
 
   If you have any questions about the project you can reach out to me via email or GitHub with the information below. 
 
-  >Email: s 
+  >Email: sample@gmail.com 
 
-  >GitHub Username: s 
+  >GitHub Username: THenlie 
 
-  >To visit my GitHub [click here!](https://github.com/s)
+  >To visit my GitHub [click here!](https://github.com/THenlie)
 
   
