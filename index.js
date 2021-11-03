@@ -8,11 +8,27 @@ const questions = () => {
     return inquirer.prompt([{
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project?'
+        message: 'What is the title of your project? (Required)',
+        validate: function(name) {
+            if (name) {
+                return true;
+            } else {
+                console.log('You must enter your project title!')
+                return false;
+            }
+        }
     }, {
         type: 'input',
         name: 'user',
-        message: 'What is your GitHub username?'
+        message: 'What is your GitHub username? (Required)',
+        validate: function(name) {
+            if (name) {
+                return true;
+            } else {
+                console.log('You must enter your GitHub username!')
+                return false;
+            }
+        }
     }, {
         type: 'input',
         name: 'email',
