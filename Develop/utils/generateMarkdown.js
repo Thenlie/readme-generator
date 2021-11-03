@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
     if (license) {
-      return `https://img.shields.io/badge/license-${license}-brightgreen`
+      return `![Project License Badge](https://img.shields.io/badge/license-${license}-brightgreen)`
     } else {
       return '';
     }
@@ -11,15 +11,17 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   return `
-    ## License
+  ## License
 
-    ${renderLicenseBadge(license)}
+  ${renderLicenseBadge(license)}
   `
 }
 
@@ -63,9 +65,9 @@ function generateMarkdown(data) {
 
   If you have any questions about the project you can reach out to me at the email below or message me on GitHub with the username below. 
 
-  Email: ${data.email} 
-  GitHub Username: ${data.user}
-  
+  *Email: ${data.email} 
+  *GitHub Username: ${data.user}
+
   `;
 }
 
