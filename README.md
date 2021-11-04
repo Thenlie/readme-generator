@@ -4,7 +4,9 @@
 
   ## Description
 
-  A simple NodeJS program that generates a professional README markdown file based on user input. Made during the U of U coding bootcamp.
+  A simple NodeJS program that generates a professional README markdown file based on user input. Use this to create a full README or a template to get you started. Even this README was made with the program! 
+
+  Made during the U of U full stack flex coding bootcamp.
 
   ## Table of Contents
 
@@ -19,11 +21,13 @@
 
   ## Installation
 
-  To run this program simply clone the repo from GitHub. Then use the command `npm i inquirer` to download the inquirer package. You are all set! Now you can run the program with the command `node index.js`.
+  To run this program simply clone the repo from GitHub. Then use the command `npm i inquirer` to download the inquirer package. 
+  
+  You are all set! Now you can run the program with the command `node index.js`.
 
   ## Usage
 
-  After using the `node script.js` command you will be given a number of prompts to answer. Once you answer these the `README.md` will be created in the `/dist` folder. This can be seen in the GIF below. 
+  After using the `node script.js` command you will be given a number of prompts to answer. Once you answer these the `README.md` file will be created in the `/dist` folder of the project. This can be seen in the GIF below. 
 
   ![Program Walkthrough GIF](https://github.com/Thenlie/readme-generator/blob/main/assets/videos/video-walkthrough2.gif)  
   
@@ -63,6 +67,4 @@
 
   >Email: leithen113@gmail.com 
 
-  >GitHub Username: Thenlie 
-
-  >To visit my GitHub [click here!](https://github.com/Thenlie)
+  >GitHub Username: [Thenlie](https://github.com/Thenlie)
