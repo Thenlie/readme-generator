@@ -214,8 +214,6 @@
 
   >Email: leithen113@gmail.com 
 
-  >GitHub Username: Thenlie 
-
-  >To visit my GitHub [click here!](https://github.com/Thenlie)
+  >GitHub : [Thenlie](https://github.com/Thenlie)
 
   

@@ -322,9 +322,7 @@ function generateMarkdown(data) {
 
   >Email: ${data.email} 
 
-  >GitHub Username: ${data.user} 
-
-  >To visit my GitHub [click here!](https://github.com/${data.user})
+  >GitHub : [${data.user}](https://github.com/${data.user})
 
   `;
 }
