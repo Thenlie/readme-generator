@@ -1,6 +1,4 @@
-  # README Generator
-
-  ![Project License Badge](https://img.shields.io/badge/license-ISC-brightgreen)
+  # README Generator  ![Project License Badge](https://img.shields.io/badge/license-ISC-brightgreen)
 
   ## Description
 
