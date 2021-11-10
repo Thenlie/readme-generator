@@ -1,7 +1,5 @@
 
-  # README Generator
-
-  ![Project License Badge](https://img.shields.io/badge/license-GNU-brightgreen)
+  # README Generator  ![Project License Badge](https://img.shields.io/badge/license-GNU-brightgreen)
 
   ## Description
 
@@ -215,5 +213,3 @@
   >Email: leithen113@gmail.com 
 
   >GitHub : [Thenlie](https://github.com/Thenlie)
-
-  
