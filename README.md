@@ -4,7 +4,7 @@
 
   A simple NodeJS program that generates a professional README markdown file based on user input. Use this to create a full README or a template to get you started. Even this README was made with the program! 
 
-  Made during the U of U full stack flex coding bootcamp.
+  Made during the U of U full stack flex coding bootcamp with [inquirer](https://github.com/SBoudrias/Inquirer.js) and [node.js](https://nodejs.org/en/).
 
   ## Table of Contents
 
