@@ -36,7 +36,7 @@ const questions = () => {
     }, {
         type: 'input',
         name: 'description',
-        message: 'What is the descritption of your project?'
+        message: 'What is the description of your project?'
     }, {
         type: 'input',
         name: 'install',
