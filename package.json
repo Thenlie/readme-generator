@@ -1,5 +1,6 @@
 {
   "name": "static-site",
+  "type": "module",
   "version": "1.0.0",
   "description": "README Generator",
   "main": "index.js",
@@ -9,9 +10,6 @@
   },
   "author": "Thenlie",
   "license": "ISC",
-  "dependencies": {
-    "inquirer": "^6.5.2"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Thenlie/readme-generator.git"
@@ -19,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Thenlie/readme-generator/issues"
   },
-  "homepage": "https://github.com/Thenlie/readme-generator#readme"
+  "homepage": "https://github.com/Thenlie/readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  }
 }
