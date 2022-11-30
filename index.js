@@ -57,7 +57,7 @@ const questions = async () => {
             type: 'list',
             name: 'license',
             message: 'What is the license of your project?',
-            choices: ['MIT', 'ISC', 'GNU LGPL', 'Unlicense', 'none'],
+            choices: ['MIT', 'BSD 2-Clause', 'BSD 3-Clause', 'Boost', 'GNU LGPL', 'GNU AGPL', 'GNU GPL v2', 'GNU GPL v3', 'Mozilla', 'Unlicense', 'none'],
             default: 'MIT'
         }
     ]);
@@ -68,7 +68,8 @@ const questions = async () => {
 // Write file to /dist directory
 function writeToFile(fileName, data) {
     try {
-        fs.writeFileSync(fileName, data);
+        fs.writeFileSync(fileName, data); 
+        console.log('README Created Successfully!');
     } catch (error) {
         console.error(error);
     }
