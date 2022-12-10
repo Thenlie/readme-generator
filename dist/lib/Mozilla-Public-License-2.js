@@ -1,4 +1,4 @@
-export const MozillaLicense = (): string => {
+export const MozillaLicense = () => {
     return `
     Mozilla Public License Version 2.0
     ==================================
@@ -375,3 +375,4 @@ export const MozillaLicense = (): string => {
       defined by the Mozilla Public License, v. 2.0.
     `;
 };
+//# sourceMappingURL=Mozilla-Public-License-2.js.map

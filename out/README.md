@@ -1,5 +1,41 @@
-export const MozillaLicense = (): string => {
-    return `
+
+  # lkjsdaflkjsdf  ![Project License Badge](https://img.shields.io/badge/license-Mozilla-brightgreen)
+
+  ## Description
+
+  hjklsadgjkhsdag
+
+  ## Table of Contents
+
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [Contributing](#Contributing)
+  * [Tests](#Tests)
+  * [License](#license)
+  * [Questions](#Questions)
+
+  ***
+
+  ## Installation
+
+  sdalkjsdaf
+
+  ## Usage
+
+  ldksjflksadf
+
+  ## Contributing
+
+  lksdjaflkajsdf
+
+  ## Tests
+
+  lksadjflkjsdf
+  
+  
+  ## License
+  
+    
     Mozilla Public License Version 2.0
     ==================================
     
@@ -373,5 +409,15 @@ export const MozillaLicense = (): string => {
     
       This Source Code Form is "Incompatible With Secondary Licenses", as
       defined by the Mozilla Public License, v. 2.0.
-    `;
-};
+    
+    
+  
+  ## Questions
+
+  If you have any questions about the project you can reach out to me via email or GitHub with the information below. 
+
+  >Email: sadfglkajsdaf 
+
+  >GitHub : [lksjdaf](https://github.com/lksjdaf)
+
+  

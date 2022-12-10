@@ -1,5 +1,19 @@
-import { ApacheLicense, BoostLicense, BSD2License, BSD3License, CCZ1License, Eclipse2License, GNUAGPL3License, GNUGPL2License, GNUGPL3License, GNULGPL2_1License, MITLicense, MozillaLicense, Unlicense } from '../lib';
-import { InputData } from '../types';
+import {
+    ApacheLicense,
+    BoostLicense,
+    BSD2License,
+    BSD3License,
+    CCZ1License,
+    Eclipse2License,
+    GNUAGPL3License,
+    GNUGPL2License,
+    GNUGPL3License,
+    GNULGPL2_1License,
+    MITLicense,
+    MozillaLicense,
+    Unlicense
+} from '../lib/index.js';
+import { InputData } from '../types.js';
 
 // Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
@@ -14,7 +28,7 @@ function renderLicenseBadge(license: string): string {
 // Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(data: InputData): string {
-    let year = new Date().getFullYear();
+    const year = new Date().getFullYear();
     switch (data.license) {
     case 'Apache':
         return ApacheLicense(year, data.user);
@@ -37,7 +51,7 @@ function renderLicenseLink(data: InputData): string {
     case 'GNU LGPL':
         return GNULGPL2_1License(year, data.user);
     case 'Mozilla':
-        return MozillaLicense(year, data.user);
+        return MozillaLicense();
     case 'MIT':
         return MITLicense(year, data.user);
     case 'Unlicense':
@@ -61,7 +75,7 @@ function renderLicenseSection(data: InputData) {
 }
 
 // Function to generate markdown for README
-function generateMarkdown(data: InputData) {
+export function generateMarkdown(data: InputData) {
     return `
   # ${data.title}  ${renderLicenseBadge(data.license)}
 
@@ -108,5 +122,3 @@ function generateMarkdown(data: InputData) {
 
   `;
 }
-
-export default generateMarkdown;

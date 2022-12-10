@@ -1,4 +1,4 @@
-import { ApacheLicense, BoostLicense, BSD2License, BSD3License, CCZ1License, Eclipse2License, GNUAGPL3License, GNUGPL2License, GNUGPL3License, GNULGPL2_1License, MITLicense, MozillaLicense, Unlicense } from '../lib';
+import { ApacheLicense, BoostLicense, BSD2License, BSD3License, CCZ1License, Eclipse2License, GNUAGPL3License, GNUGPL2License, GNUGPL3License, GNULGPL2_1License, MITLicense, MozillaLicense, Unlicense } from '../lib/index.js';
 // Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -12,36 +12,36 @@ function renderLicenseBadge(license) {
 // Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(data) {
-    let year = new Date().getFullYear();
+    const year = new Date().getFullYear();
     switch (data.license) {
-    case 'Apache':
-        return ApacheLicense(year, data.user);
-    case 'BSD 2-Clause':
-        return BSD2License(year, data.user);
-    case 'BSD 3-Clause':
-        return BSD3License(year, data.user);
-    case 'Boost':
-        return BoostLicense();
-    case 'Creative Commons Universal':
-        return CCZ1License();
-    case 'Eclipse':
-        return Eclipse2License();
-    case 'GNU AGPL':
-        return GNUAGPL3License(year, data.user);
-    case 'GNU GPL v2':
-        return GNUGPL2License(year, data.user);
-    case 'GNU GPL v3':
-        return GNUGPL3License(year), data.user;
-    case 'GNU LGPL':
-        return GNULGPL2_1License(year, data.user);
-    case 'Mozilla':
-        return MozillaLicense(year, data.user);
-    case 'MIT':
-        return MITLicense(year, data.user);
-    case 'Unlicense':
-        return Unlicense();
-    default:
-        return '';
+        case 'Apache':
+            return ApacheLicense(year, data.user);
+        case 'BSD 2-Clause':
+            return BSD2License(year, data.user);
+        case 'BSD 3-Clause':
+            return BSD3License(year, data.user);
+        case 'Boost':
+            return BoostLicense();
+        case 'Creative Commons Universal':
+            return CCZ1License();
+        case 'Eclipse':
+            return Eclipse2License();
+        case 'GNU AGPL':
+            return GNUAGPL3License(year, data.user);
+        case 'GNU GPL v2':
+            return GNUGPL2License(year, data.user);
+        case 'GNU GPL v3':
+            return GNUGPL3License(year, data.user);
+        case 'GNU LGPL':
+            return GNULGPL2_1License(year, data.user);
+        case 'Mozilla':
+            return MozillaLicense();
+        case 'MIT':
+            return MITLicense(year, data.user);
+        case 'Unlicense':
+            return Unlicense();
+        default:
+            return '';
     }
 }
 // Function that returns the license section of README
@@ -56,7 +56,7 @@ function renderLicenseSection(data) {
     `;
 }
 // Function to generate markdown for README
-function generateMarkdown(data) {
+export function generateMarkdown(data) {
     return `
   # ${data.title}  ${renderLicenseBadge(data.license)}
 
@@ -103,4 +103,4 @@ function generateMarkdown(data) {
 
   `;
 }
-export default generateMarkdown;
+//# sourceMappingURL=generateMarkdown.js.map

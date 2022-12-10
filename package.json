@@ -6,8 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "lint": "npx eslint . --ext .js"
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "lint": "npx eslint . --ext .ts"
   },
   "author": "Thenlie",
   "license": "ISC",
@@ -20,7 +21,8 @@
   },
   "homepage": "https://github.com/Thenlie/readme-generator#readme",
   "dependencies": {
-    "inquirer": "^9.1.4"
+    "inquirer": "^9.1.4",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.3",
