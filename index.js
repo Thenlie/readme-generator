@@ -13,7 +13,7 @@ const questions = async () => {
                 if (name) {
                     return true;
                 } else {
-                    console.log('You must enter your project title!')
+                    console.log('You must enter your project title!');
                     return false;
                 }
             }
@@ -25,7 +25,7 @@ const questions = async () => {
                 if (name) {
                     return true;
                 } else {
-                    console.log('You must enter your GitHub username!')
+                    console.log('You must enter your GitHub username!');
                     return false;
                 }
             }
@@ -80,7 +80,7 @@ const init = async () => {
     const answers = await questions();
     const markdown = generateMarkdown(answers);
     writeToFile('./dist/README.md', markdown);
-}
+};
 
 // Function call to initialize app
 init();

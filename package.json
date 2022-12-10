@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "npx eslint . --ext .js"
   },
   "author": "Thenlie",
   "license": "ISC",
@@ -20,5 +21,8 @@
   "homepage": "https://github.com/Thenlie/readme-generator#readme",
   "dependencies": {
     "inquirer": "^9.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.29.0"
   }
 }
