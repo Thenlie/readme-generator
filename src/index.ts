@@ -1,9 +1,10 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
-import { generateMarkdown } from './utils/generateMarkdown.js';
+import generateMarkdown from './utils/generateMarkdown';
+import { InputData } from './types';
 
 // Array of questions for user input
-const questions = async () => {
+const questions = async (): Promise<InputData> => {
     const response = await inquirer.prompt([
         {
             type: 'input',
@@ -66,7 +67,7 @@ const questions = async () => {
 };
 
 // Write file to /dist directory
-function writeToFile(fileName, data) {
+function writeToFile(fileName: fs.PathOrFileDescriptor, data: string | NodeJS.ArrayBufferView) {
     try {
         fs.writeFileSync(fileName, data); 
         console.log('README Created Successfully!');
@@ -76,7 +77,7 @@ function writeToFile(fileName, data) {
 }
 
 // Main app function
-const init = async () => {
+const init = async (): Promise<void> => {
     const answers = await questions();
     const markdown = generateMarkdown(answers);
     writeToFile('./dist/README.md', markdown);

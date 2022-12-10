@@ -1,4 +1,4 @@
-export const MITLicense = (year, author) => {
+export const MITLicense = (year: number, author: string): string => {
     return `
 MIT License
 

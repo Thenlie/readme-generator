@@ -1,4 +1,4 @@
-export const Eclipse2License = () => {
+export const Eclipse2License = (): string => {
     return `
 Eclipse Public License - v 2.0
 

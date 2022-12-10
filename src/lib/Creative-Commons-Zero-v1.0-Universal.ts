@@ -1,4 +1,4 @@
-export const CCZ1License = () => {
+export const CCZ1License = (): string => {
     return `
 Creative Commons Legal Code
 

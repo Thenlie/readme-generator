@@ -1,15 +1,14 @@
-import { ApacheLicense, BoostLicense, BSD2License, BSD3License, CCZ1License, Eclipse2License, GNUAGPL3License, GNUGPL2License, GNUGPL3License, GNULGPL2_1License, MITLicense, MozillaLicense, Unlicense } from '../lib/index.js';
-
+import { ApacheLicense, BoostLicense, BSD2License, BSD3License, CCZ1License, Eclipse2License, GNUAGPL3License, GNUGPL2License, GNUGPL3License, GNULGPL2_1License, MITLicense, MozillaLicense, Unlicense } from '../lib';
 // Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
     if (license !== 'none') {
         return `![Project License Badge](https://img.shields.io/badge/license-${license}-brightgreen)`;
-    } else {
+    }
+    else {
         return '';
     }
 }
-
 // Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(data) {
@@ -45,20 +44,17 @@ function renderLicenseLink(data) {
         return '';
     }
 }
-
 // Function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(data) {
     return `
   ## License
   
-    ${data.license !== 'none' 
-        ? renderLicenseLink(data) 
-        : 'There has not been any license set for this project.'
-}
+    ${data.license !== 'none'
+        ? renderLicenseLink(data)
+        : 'There has not been any license set for this project.'}
     `;
 }
-
 // Function to generate markdown for README
 function generateMarkdown(data) {
     return `
@@ -107,5 +103,4 @@ function generateMarkdown(data) {
 
   `;
 }
-
-export { generateMarkdown };
+export default generateMarkdown;

@@ -1,4 +1,4 @@
-export const ApacheLicense = (year, author) => {
+export const ApacheLicense = (year: number, author: string): string => {
     return `
                                  Apache License
                            Version 2.0, January 2004

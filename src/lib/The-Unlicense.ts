@@ -1,4 +1,4 @@
-export const Unlicense = () => {
+export const Unlicense = (): string => {
     return `
 This is free and unencumbered software released into the public domain.
 

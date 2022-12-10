@@ -1,4 +1,4 @@
-export const GNULGPL2_1License = (year, author) => {
+export const GNULGPL2_1License = (year: number, author: string): string => {
     return `
     GNU LESSER GENERAL PUBLIC LICENSE
     Version 2.1, February 1999
