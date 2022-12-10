@@ -1,20 +1,16 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-
 import { ApacheLicense, BoostLicense, BSD2License, BSD3License, CCZ1License, Eclipse2License, GNUAGPL3License, GNUGPL2License, GNUGPL3License, GNULGPL2_1License, MITLicense, MozillaLicense, Unlicense } from "../lib/index.js";
 
+// Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-    if (license !== 'none' && license !== 'GNU LGPL') {
-      return `![Project License Badge](https://img.shields.io/badge/license-${license}-brightgreen)`
-    } else if (license === 'GNU LGPL') {
-      return `![Project License Badge](https://img.shields.io/badge/license-GNU-brightgreen)`
+    if (license !== 'none') {
+        return `![Project License Badge](https://img.shields.io/badge/license-${license}-brightgreen)`;
     } else {
-      return '';
+        return ``;
     }
 };
 
-
-// TODO: Create a function that returns the license link
+// Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(data) {
     let year = new Date().getFullYear();
@@ -50,7 +46,7 @@ function renderLicenseLink(data) {
     }
 }
 
-// TODO: Create a function that returns the license section of README
+// Function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(data) {
     return `
@@ -63,7 +59,7 @@ function renderLicenseSection(data) {
     `
 }
 
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(data) {
   return `
   # ${data.title}  ${renderLicenseBadge(data.license)}
@@ -76,9 +72,9 @@ function generateMarkdown(data) {
 
   * [Installation](#Installation)
   * [Usage](#Usage)
-  * [License](#license)
   * [Contributing](#Contributing)
   * [Tests](#Tests)
+  * [License](#license)
   * [Questions](#Questions)
 
   ***
@@ -91,8 +87,6 @@ function generateMarkdown(data) {
 
   ${data.usage}
 
-  ${renderLicenseSection(data)}
-
   ## Contributing
 
   ${data.contribution}
@@ -100,6 +94,8 @@ function generateMarkdown(data) {
   ## Tests
 
   ${data.test}
+  
+  ${renderLicenseSection(data)}
   
   ## Questions
 
