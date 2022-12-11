@@ -92,7 +92,10 @@ function writeToFile(fileName, data) {
 const init = async () => {
     const answers = await questions();
     const markdown = generateMarkdown(answers);
-    writeToFile(path.join(path.resolve(), './out/README.md'), markdown);
+    const directory = path.join(path.resolve(), '/out');
+    if (!fs.existsSync(directory))
+        fs.mkdirSync(directory, { recursive: true });
+    writeToFile(directory + '/README.md', markdown);
 };
 // Function call to initialize app
 init();
