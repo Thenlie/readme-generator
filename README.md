@@ -10,7 +10,18 @@
 
   A simple NodeJS program that generates a professional README markdown file based on user input. Use this to create a full README or a template to get you started. Even this README was made with the program! 
   
-  This program utilizes the Inquirer package to prompt the user through the command line. Made during the University of Utah's coding bootcamp, this was one of my first command line applications. 
+  This program utilizes the Inquirer package to prompt the user through the command line. Made during the University of Utah's coding bootcamp, this was one of my first command line applications.
+
+  ## Usage on NPM
+
+  You can install the package with the command below.
+  ```
+  npm i boiler-gen
+  ```
+  Once the package is installed, simply run the command below to start the generator.
+  ```
+  npx boiler-gen
+  ```
 
   
   ### Created with: 
