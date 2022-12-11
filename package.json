@@ -1,5 +1,5 @@
 {
-  "name": "static-site",
+  "name": "boiler-gen",
   "type": "module",
   "version": "1.0.0",
   "description": "README Generator",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Thenlie/readme-generator#readme",
   "bin": {
-    "readme-gen": "dist/index.js"
+    "boiler-gen": "dist/index.js"
   },
   "dependencies": {
     "inquirer": "^9.1.4"
