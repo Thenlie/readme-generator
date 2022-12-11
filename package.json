@@ -20,9 +20,11 @@
     "url": "https://github.com/Thenlie/readme-generator/issues"
   },
   "homepage": "https://github.com/Thenlie/readme-generator#readme",
+  "bin": {
+    "readme-gen": "dist/index.js"
+  },
   "dependencies": {
-    "inquirer": "^9.1.4",
-    "ts-node": "^10.9.1"
+    "inquirer": "^9.1.4"
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.3",

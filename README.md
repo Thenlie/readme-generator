@@ -15,9 +15,10 @@
   
   ### Created with: 
   
-  * JavaScript
-  * [Node JS](https://nodejs.org/en/)
+  * [TypeScript](https://www.typescriptlang.org/)
   * [Inquirer](https://github.com/SBoudrias/Inquirer.js)
+  * [Node JS](https://nodejs.org/en/)
+  * [Git](https://git-scm.com/)
 
   ## Table of Contents
 
@@ -37,7 +38,9 @@
   git clone git@github.com:Thenlie/readme-generator.git
   ```
   
-  You can then use the command `npm i` to download the projects npm dependencies. Currently, that is just Inquirer. Once you have done that you are all set! Now you can run the program with the command `node index.js`.
+  You can then use the command `npm install` to download the projects npm dependencies. Currently, that is Inquirer, TypeScript and Es-Lint. Once you have done that you are ready to compile the typescript. This can be done with the command `npm run build`. This will output JavaScript files to the `/dist` directory which are used by node. Finally, to run the application, use the command `npm start`. 
+
+  > NOTE: If you make any code changes, be sure to run `npm run build` again.
 
   ## Usage
 
@@ -221,7 +224,6 @@
   ## Contributing
 
   Feel free to fork this repo and make it your own! If you think your changes could be widely used, submit a pull request! More info on how to do that can be found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
-  
   
   ## Questions?
 

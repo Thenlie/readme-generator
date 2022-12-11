@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from 'inquirer';
 import fs from 'fs';
 import path from 'path';
@@ -59,13 +60,25 @@ const questions = async () => {
             type: 'list',
             name: 'license',
             message: 'What is the license of your project?',
-            choices: ['MIT', 'BSD 2-Clause', 'BSD 3-Clause', 'Boost', 'GNU LGPL', 'GNU AGPL', 'GNU GPL v2', 'GNU GPL v3', 'Mozilla', 'Unlicense', 'none'],
+            choices: [
+                'MIT',
+                'BSD 2-Clause',
+                'BSD 3-Clause',
+                'Boost',
+                'GNU LGPL',
+                'GNU AGPL',
+                'GNU GPL v2',
+                'GNU GPL v3',
+                'Mozilla',
+                'Unlicense',
+                'none'
+            ],
             default: 'MIT'
         }
     ]);
     return response;
 };
-// Write file to /dist directory
+// Write file to '/out' directory
 function writeToFile(fileName, data) {
     try {
         fs.writeFileSync(fileName, data);
