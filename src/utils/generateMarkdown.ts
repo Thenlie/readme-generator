@@ -12,7 +12,7 @@ import {
     MITLicense,
     MozillaLicense,
     Unlicense
-} from '../lib/index.js';
+} from '../lib/licenses/index.js';
 import { InputData } from '../types.js';
 
 // Function that returns a license badge based on which license is passed in
@@ -27,7 +27,7 @@ function renderLicenseBadge(license: string): string {
 
 // Function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(data: InputData): string {
+export function renderLicense(data: InputData): string {
     const year = new Date().getFullYear();
     switch (data.license) {
     case 'Apache':
@@ -68,7 +68,7 @@ function renderLicenseSection(data: InputData) {
   ## License
   
     ${data.license !== 'none' 
-        ? renderLicenseLink(data) 
+        ? renderLicense(data) 
         : 'There has not been any license set for this project.'
 }
     `;

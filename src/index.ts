@@ -3,7 +3,7 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
 import path from 'path';
-import { generateMarkdown } from './utils/generateMarkdown.js';
+import { generateMarkdown, renderLicense } from './utils/generateMarkdown.js';
 import { InputData } from './types.js';
 
 // Array of questions for user input
@@ -82,12 +82,16 @@ const questions = async (): Promise<InputData> => {
 };
 
 // Write file to '/out' directory
-function writeToFile(fileName: fs.PathOrFileDescriptor, data: string) {
+function writeToFile(dirName: fs.PathOrFileDescriptor, readme: string, license: string) {
     try {
-        fs.writeFileSync(fileName, data); 
-        console.log('README Created Successfully!');
+        fs.writeFileSync(dirName + '/README.md', readme); 
+        console.log('✅ README Created Successfully!');
+        if (license) {
+            fs.writeFileSync(dirName + '/LICENSE', license); 
+            console.log('✅ LICENSE Created Successfully!');
+        }
     } catch (error) {
-        console.error(error);
+        console.error('❌ ' + error);
     }
 }
 
@@ -95,9 +99,12 @@ function writeToFile(fileName: fs.PathOrFileDescriptor, data: string) {
 const init = async (): Promise<void> => {
     const answers = await questions();
     const markdown = generateMarkdown(answers);
+    const license = renderLicense(answers);
     const directory = path.join(path.resolve(), '/out');
-    if (!fs.existsSync(directory)) fs.mkdirSync(directory, {recursive: true});
-    writeToFile(directory + '/README.md', markdown);
+    if (!fs.existsSync(directory)) {
+        fs.mkdirSync(directory, { recursive: true });
+    }
+    writeToFile(directory, markdown, license);
 };
 
 // Function call to initialize app
