@@ -13,51 +13,59 @@ const questions = async (): Promise<InputData> => {
             type: 'input',
             name: 'title',
             message: 'What is the title of your project? (Required)',
-            validate: function(name) {
+            validate: function (name) {
                 if (name) {
                     return true;
                 } else {
                     console.log('You must enter your project title!');
                     return false;
                 }
-            }
-        }, {
+            },
+        },
+        {
             type: 'input',
             name: 'user',
             message: 'What is your GitHub username? (Required)',
-            validate: function(name) {
+            validate: function (name) {
                 if (name) {
                     return true;
                 } else {
                     console.log('You must enter your GitHub username!');
                     return false;
                 }
-            }
-        }, {
+            },
+        },
+        {
             type: 'input',
             name: 'email',
-            message: 'What is your email address?'
-        }, {
+            message: 'What is your email address?',
+        },
+        {
             type: 'input',
             name: 'description',
-            message: 'What is the description of your project?'
-        }, {
+            message: 'What is the description of your project?',
+        },
+        {
             type: 'input',
             name: 'install',
-            message: 'What are the installation instructions for you project?'
-        }, {
+            message: 'What are the installation instructions for you project?',
+        },
+        {
             type: 'input',
             name: 'usage',
-            message: 'What is the usage information for your project?'
-        }, {
+            message: 'What is the usage information for your project?',
+        },
+        {
             type: 'input',
             name: 'contribution',
-            message: 'What are the contribution guidelines for your project?'
-        }, {
+            message: 'What are the contribution guidelines for your project?',
+        },
+        {
             type: 'input',
             name: 'test',
-            message: 'What are the test instruction for your project?'
-        }, {
+            message: 'What are the test instruction for your project?',
+        },
+        {
             type: 'list',
             name: 'license',
             message: 'What is the license of your project?',
@@ -72,10 +80,10 @@ const questions = async (): Promise<InputData> => {
                 'GNU GPL v3',
                 'Mozilla',
                 'Unlicense',
-                'none'
+                'none',
             ],
-            default: 'MIT'
-        }
+            default: 'MIT',
+        },
     ]);
 
     return response;
@@ -84,10 +92,10 @@ const questions = async (): Promise<InputData> => {
 // Write file to '/out' directory
 function writeToFile(dirName: fs.PathOrFileDescriptor, readme: string, license: string) {
     try {
-        fs.writeFileSync(dirName + '/README.md', readme); 
+        fs.writeFileSync(dirName + '/README.md', readme);
         console.log('✅ README Created Successfully!');
         if (license) {
-            fs.writeFileSync(dirName + '/LICENSE', license); 
+            fs.writeFileSync(dirName + '/LICENSE', license);
             console.log('✅ LICENSE Created Successfully!');
         }
     } catch (error) {

@@ -55,7 +55,7 @@
 
   ## Usage
 
-  After using the `node index.js` command, running the app is simple! You will be given a number of prompts to answer. Once you answer all of the questions the `README.md` file will be created in the `/dist` folder of the project. This process can be seen in the GIF below. From there simply copy the README from the `/dist` directory and paste it in your new project. 
+  After using the `node index.js` command, running the app is simple! You will be given a number of prompts to answer. Once you answer all of the questions the `README.md` file will be created in the `/out` folder of the project. This process can be seen in the GIF below. From there simply copy the README from the `/out` directory and paste it in your new project. 
 
   ![Program Walkthrough GIF](https://github.com/Thenlie/readme-generator/blob/main/assets/videos/video-walkthrough2.gif)  
   

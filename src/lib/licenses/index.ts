@@ -25,5 +25,5 @@ export {
     GNULGPL2_1License,
     MITLicense,
     MozillaLicense,
-    Unlicense
+    Unlicense,
 };
