@@ -2,7 +2,7 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
 import path from 'path';
-import { generateMarkdown } from './utils/generateMarkdown.js';
+import { generateMarkdown, renderLicense } from './utils/generateMarkdown.js';
 // Array of questions for user input
 const questions = async () => {
     const response = await inquirer.prompt([
@@ -79,23 +79,29 @@ const questions = async () => {
     return response;
 };
 // Write file to '/out' directory
-function writeToFile(fileName, data) {
+function writeToFile(dirName, readme, license) {
     try {
-        fs.writeFileSync(fileName, data);
-        console.log('README Created Successfully!');
+        fs.writeFileSync(dirName + '/README.md', readme);
+        console.log('✅ README Created Successfully!');
+        if (license) {
+            fs.writeFileSync(dirName + '/LICENSE', license);
+            console.log('✅ LICENSE Created Successfully!');
+        }
     }
     catch (error) {
-        console.error(error);
+        console.error('❌ ' + error);
     }
 }
 // Main app function
 const init = async () => {
     const answers = await questions();
     const markdown = generateMarkdown(answers);
+    const license = renderLicense(answers);
     const directory = path.join(path.resolve(), '/out');
-    if (!fs.existsSync(directory))
+    if (!fs.existsSync(directory)) {
         fs.mkdirSync(directory, { recursive: true });
-    writeToFile(directory + '/README.md', markdown);
+    }
+    writeToFile(directory, markdown, license);
 };
 // Function call to initialize app
 init();
