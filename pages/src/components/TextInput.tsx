@@ -1,7 +1,12 @@
 import * as React from 'react';
 
-const TextInput = () => {
-    return <input type='text' placeholder='Input'></input>;
+interface TextInputProps {
+    placeholder: string;
+    name: string;
+}
+
+const TextInput = (props: TextInputProps): JSX.Element => {
+    return <input type='text' placeholder={props.placeholder} name={props.name}></input>;
 };
 
 export default TextInput;

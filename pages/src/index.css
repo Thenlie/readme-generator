@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Mona Sans';
+    src:
+        url('./assets/Mona-Sans.woff2') format('woff2 supports variations'),
+        url('./assets/Mona-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+  
+  @font-face {
+    font-family: 'Hubot Sans';
+    src:
+        url('./assets/Hubot-Sans.woff2') format('woff2 supports variations'),
+        url('./assets/Hubot-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+html {
+    font-family: 'Mona Sans';
+}
+
+textarea {
+    font-family: 'Hubot Sans';
+    display: block;
+}
+
+body {
+    background-color: rgb(13,17,24);
+    color: rgb(139,148,159);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+}
+
+/* TEXT INPUT */
+input {
+    margin: .5em;
+}
+
+/* TEXT AREA */
+textarea {
+    margin: .5em;
+}
