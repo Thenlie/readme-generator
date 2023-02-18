@@ -57,10 +57,30 @@ main {
 nav {
     background-color: var(--secondary);
     padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 footer {
     padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
     background-color: var(--secondary);
     color: var(--secondary-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.github-logo {
+    transition: .5s;
+    filter: brightness(1.5);
+}
+
+.github-logo:hover {
+    filter: brightness(3);
+}
+
+footer a:focus-visible {
+    outline: 1px auto var(--secondary-text);
 }
