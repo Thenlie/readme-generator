@@ -1,0 +1,14 @@
+button {
+    background-color: var(--secondary);
+    color: var(--primary-text);
+    margin: .5em;
+    padding: 1em;
+    border-radius: .5em;
+    transition: .5s;
+    border: 1px solid var(--secondary-text);
+    align-self: flex-start;
+}
+
+button:hover {
+    background-color: var(--tertiary);
+}

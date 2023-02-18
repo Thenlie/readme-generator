@@ -15,12 +15,14 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
         "indent": [
             "error",
-            4
+            4,
+            { "SwitchCase": 1, "ignoredNodes": ["TemplateLiteral > *"] }
         ],
         "linebreak-style": [
             "error",
@@ -33,6 +35,7 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "prettier/prettier": "error"
     }
 }

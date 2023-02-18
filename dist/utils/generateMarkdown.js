@@ -1,4 +1,4 @@
-import { ApacheLicense, BoostLicense, BSD2License, BSD3License, CCZ1License, Eclipse2License, GNUAGPL3License, GNUGPL2License, GNUGPL3License, GNULGPL2_1License, MITLicense, MozillaLicense, Unlicense } from '../lib/index.js';
+import { ApacheLicense, BoostLicense, BSD2License, BSD3License, CCZ1License, Eclipse2License, GNUAGPL3License, GNUGPL2License, GNUGPL3License, GNULGPL2_1License, MITLicense, MozillaLicense, Unlicense } from '../lib/licenses/index.js';
 // Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -11,7 +11,7 @@ function renderLicenseBadge(license) {
 }
 // Function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(data) {
+export function renderLicense(data) {
     const year = new Date().getFullYear();
     switch (data.license) {
         case 'Apache':
@@ -51,7 +51,7 @@ function renderLicenseSection(data) {
   ## License
   
     ${data.license !== 'none'
-        ? renderLicenseLink(data)
+        ? renderLicense(data)
         : 'There has not been any license set for this project.'}
     `;
 }

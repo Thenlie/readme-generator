@@ -11,7 +11,7 @@ import {
     GNULGPL2_1License,
     MITLicense,
     MozillaLicense,
-    Unlicense
+    Unlicense,
 } from '../lib/licenses/index.js';
 import { InputData } from '../types.js';
 
@@ -30,34 +30,34 @@ function renderLicenseBadge(license: string): string {
 export function renderLicense(data: InputData): string {
     const year = new Date().getFullYear();
     switch (data.license) {
-    case 'Apache':
-        return ApacheLicense(year, data.user);
-    case 'BSD 2-Clause':
-        return BSD2License(year, data.user);
-    case 'BSD 3-Clause':
-        return BSD3License(year, data.user);
-    case 'Boost':
-        return BoostLicense();
-    case 'Creative Commons Universal':
-        return CCZ1License();
-    case 'Eclipse':
-        return Eclipse2License();
-    case 'GNU AGPL':
-        return GNUAGPL3License(year, data.user);
-    case 'GNU GPL v2':
-        return GNUGPL2License(year, data.user);
-    case 'GNU GPL v3':
-        return GNUGPL3License(year, data.user);
-    case 'GNU LGPL':
-        return GNULGPL2_1License(year, data.user);
-    case 'Mozilla':
-        return MozillaLicense();
-    case 'MIT':
-        return MITLicense(year, data.user);
-    case 'Unlicense':
-        return Unlicense();
-    default:
-        return '';
+        case 'Apache':
+            return ApacheLicense(year, data.user);
+        case 'BSD 2-Clause':
+            return BSD2License(year, data.user);
+        case 'BSD 3-Clause':
+            return BSD3License(year, data.user);
+        case 'Boost':
+            return BoostLicense();
+        case 'Creative Commons Universal':
+            return CCZ1License();
+        case 'Eclipse':
+            return Eclipse2License();
+        case 'GNU AGPL':
+            return GNUAGPL3License(year, data.user);
+        case 'GNU GPL v2':
+            return GNUGPL2License(year, data.user);
+        case 'GNU GPL v3':
+            return GNUGPL3License(year, data.user);
+        case 'GNU LGPL':
+            return GNULGPL2_1License(year, data.user);
+        case 'Mozilla':
+            return MozillaLicense();
+        case 'MIT':
+            return MITLicense(year, data.user);
+        case 'Unlicense':
+            return Unlicense();
+        default:
+            return '';
     }
 }
 
@@ -67,10 +67,11 @@ function renderLicenseSection(data: InputData) {
     return `
   ## License
   
-    ${data.license !== 'none' 
-        ? renderLicense(data) 
-        : 'There has not been any license set for this project.'
-}
+    ${
+        data.license !== 'none'
+            ? renderLicense(data)
+            : 'There has not been any license set for this project.'
+    }
     `;
 }
 

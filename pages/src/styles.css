@@ -1,0 +1,66 @@
+:root {
+    --primary: rgb(13,17,24);
+    --secondary: rgb(22,28,34);
+    --tertiary: rgb(33,38,45);
+    --primary-text: rgb(201,209,217);
+    --secondary-text: rgb(139,148,159);
+}
+
+@font-face {
+    font-family: 'Mona Sans';
+    src:
+        url('./assets/Mona-Sans.woff2') format('woff2 supports variations'),
+        url('./assets/Mona-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+  
+@font-face {
+    font-family: 'Hubot Sans';
+    src:
+        url('./assets/Hubot-Sans.woff2') format('woff2 supports variations'),
+        url('./assets/Hubot-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+html {
+    font-family: 'Mona Sans';
+}
+
+textarea {
+    font-family: 'Hubot Sans';
+    display: block;
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--primary-text);
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+}
+
+nav {
+    background-color: var(--secondary);
+    padding: 1em;
+}
+
+footer {
+    padding: 1em;
+    background-color: var(--secondary);
+    color: var(--secondary-text);
+}
