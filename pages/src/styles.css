@@ -38,7 +38,14 @@ body {
     margin: 0;
 }
 
+#root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 main {
+    flex: 1;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -48,38 +55,6 @@ main {
 nav {
     background-color: var(--secondary);
     padding: 1em;
-}
-
-/* TEXT INPUT */
-input {
-    margin: .5em;
-    padding: .4em;
-    background-color: var(--primary);
-    color: var(--primary-text);
-    outline: none;
-    border: 1px solid var(--secondary-text);
-    border-radius: .2em;
-}
-
-input:focus {
-    outline: none;
-    border-color: var(--primary-text);
-}
-
-/* TEXT AREA */
-textarea {
-    margin: .5em;
-    padding: .4em;
-    border: 1px solid var(--secondary-text);
-    border-radius: .5em;
-    background-color: var(--primary);
-    color: var(--primary-text);
-    outline: none;
-}
-
-textarea:focus {
-    outline: none;
-    border-color: var(--primary-text);
 }
 
 footer {

@@ -1,0 +1,15 @@
+textarea {
+    margin: .5em;
+    padding: .4em;
+    border: 1px solid var(--secondary-text);
+    border-radius: .5em;
+    background-color: var(--primary);
+    color: var(--primary-text);
+    outline: none;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-text);
+    background-color: var(--secondary);
+}
