@@ -1,6 +1,7 @@
 :root {
     --primary: rgb(13,17,24);
     --secondary: rgb(22,28,34);
+    --tertiary: rgb(33,38,45);
     --primary-text: rgb(201,209,217);
     --secondary-text: rgb(139,148,159);
 }

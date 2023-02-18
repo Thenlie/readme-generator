@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { TextArea, TextInput } from './components';
+import Button from './components/Button/Button';
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                 <TextArea placeholder='Installation Steps' name='install' />
                 <TextArea placeholder='Usage Instructions' name='usage' />
                 <TextArea placeholder='Testing' name='testing' />
+                <Button name='submit' content='Generate Readme' />
             </main>
             <footer>
                 <p>© Created by Thenlie</p>

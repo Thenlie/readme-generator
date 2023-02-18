@@ -3,7 +3,7 @@ textarea {
     margin: .5em;
     padding: .5em;
     border: 1px solid var(--secondary-text);
-    border-radius: .5em;
+    border-radius: .3em;
     background-color: var(--primary);
     color: var(--primary-text);
     outline: none;
