@@ -7,7 +7,12 @@ interface TextInputProps {
 }
 
 const TextInput = (props: TextInputProps): JSX.Element => {
-    return <input type='text' placeholder={props.placeholder} name={props.name}></input>;
+    return (
+        <div className='text-input-container'>
+            <label htmlFor={props.name}>{props.placeholder}</label>
+            <input type='text' placeholder={props.placeholder} name={props.name}></input>
+        </div>
+    );
 };
 
 export default TextInput;

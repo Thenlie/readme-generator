@@ -9,15 +9,13 @@ const App = () => {
                 <p>🚧 Site currently under construction! 🚧</p>
             </nav>
             <main>
-                <div>
-                    <TextInput placeholder='Title' name='title' />
-                    <TextInput placeholder='Username' name='username' />
-                    <TextInput placeholder='Email' name='email' />
-                </div>
-                <TextArea placeholder='Description' name='description' />
-                <TextArea placeholder='Installation' name='install' />
-                <TextArea placeholder='Usage' name='usage' />
-                <TextArea placeholder='Testing' name='install' />
+                <TextInput placeholder='Project Title' name='title' />
+                <TextInput placeholder='GitHub Username' name='username' />
+                <TextInput placeholder='Email' name='email' />
+                <TextArea placeholder='Project Description' name='description' />
+                <TextArea placeholder='Installation Steps' name='install' />
+                <TextArea placeholder='Usage Instructions' name='usage' />
+                <TextArea placeholder='Testing' name='testing' />
             </main>
             <footer>
                 <p>© Created by Thenlie</p>
