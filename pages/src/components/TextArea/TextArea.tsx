@@ -17,7 +17,7 @@ const TextArea = (props: TextAreaProps): JSX.Element => {
                 name={props.name}
                 rows={3}
                 value={props.value}
-                onChange={(e) => props.onChange(e.target.value)}
+                onChange={(e) => props.onChange(e.target.value.trim())}
             ></textarea>
         </div>
     );

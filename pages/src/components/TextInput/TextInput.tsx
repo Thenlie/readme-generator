@@ -17,7 +17,7 @@ const TextInput = (props: TextInputProps): JSX.Element => {
                 placeholder={props.placeholder}
                 name={props.name}
                 value={props.value}
-                onChange={(e) => props.onChange(e.target.value)}
+                onChange={(e) => props.onChange(e.target.value.trim())}
             ></input>
         </div>
     );
