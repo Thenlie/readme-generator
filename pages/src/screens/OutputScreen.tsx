@@ -12,7 +12,7 @@ const OutputScreen = (props: OutputScreenProps) => {
     return (
         <main>
             <p>Output Screen</p>
-            <MDEditor value={markdown} onChange={setMarkdown} height='100%' />
+            <MDEditor value={markdown} onChange={setMarkdown} />
         </main>
     );
 };

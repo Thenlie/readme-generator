@@ -90,5 +90,8 @@ footer a:focus-visible {
 
 .w-md-editor-text-input {
     -webkit-text-fill-color: var(--primary-text);
+}
+
+.w-md-editor-text-input:focus {
     font-weight: 500;
 }

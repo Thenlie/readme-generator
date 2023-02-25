@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { TextArea, TextInput, Button } from '../components';
 import { generateMarkdown } from '../../../src/utils/generateMarkdown';
 import { InputData } from '../../../src/types';
+import { DropDown } from '../components/DropDown';
 
 interface InputScreenProps {
     setPage: React.Dispatch<React.SetStateAction<string>>;
@@ -19,6 +20,20 @@ const InputScreen = (props: InputScreenProps) => {
     const [usage, setUsage] = useState<string>('');
     const [testing, setTesting] = useState<string>('');
     const [contribution, setContribution] = useState<string>('');
+
+    const licenseOptions = [
+        'MIT',
+        'BSD 2-Clause',
+        'BSD 3-Clause',
+        'Boost',
+        'GNU LGPL',
+        'GNU AGPL',
+        'GNU GPL v2',
+        'GNU GPL v3',
+        'Mozilla',
+        'Unlicense',
+        'none',
+    ];
 
     const handleSubmit = () => {
         const data: InputData = {
@@ -54,6 +69,7 @@ const InputScreen = (props: InputScreenProps) => {
                     onChange={setUsername}
                 />
                 <TextInput placeholder='Email' name='email' value={email} onChange={setEmail} />
+                <DropDown name='license' label='Project License' options={licenseOptions} />
                 <TextArea
                     placeholder='Project Description'
                     name='description'

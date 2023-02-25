@@ -3,16 +3,20 @@ import './style.css';
 
 interface DropDownProps {
     name: string;
+    label: string;
     options: string[];
 }
 
 const DropDown = (props: DropDownProps) => {
     return (
-        <select name='license-select'>
-            {props.options.map((opt) => (
-                <option>{opt}</option>
-            ))}
-        </select>
+        <div className='drop-down-container'>
+            <label htmlFor={props.name}>{props.label}</label>
+            <select name={props.name} id={props.name}>
+                {props.options.map((opt) => (
+                    <option key={opt}>{opt}</option>
+                ))}
+            </select>
+        </div>
     );
 };
 
