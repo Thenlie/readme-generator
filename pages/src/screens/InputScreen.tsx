@@ -4,12 +4,17 @@ import { TextArea, TextInput, Button } from '../components';
 import { generateMarkdown } from '../../../src/utils/generateMarkdown';
 import { InputData } from '../../../src/types';
 
-const InputScreen = () => {
+interface InputScreenProps {
+    setPage: React.Dispatch<React.SetStateAction<string>>;
+    setMarkdown: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const InputScreen = (props: InputScreenProps) => {
     const [title, setTitle] = useState<string>('');
     const [username, setUsername] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [description, setDescription] = useState<string>('');
-    const [license, setLicense] = useState<string>('');
+    // const [license, setLicense] = useState<string>('');
     const [install, setInstall] = useState<string>('');
     const [usage, setUsage] = useState<string>('');
     const [testing, setTesting] = useState<string>('');
@@ -20,7 +25,7 @@ const InputScreen = () => {
             title: title,
             email: email,
             user: username,
-            license: license,
+            license: 'MIT',
             description: description,
             install: install,
             usage: usage,
@@ -29,7 +34,8 @@ const InputScreen = () => {
         };
 
         const markdown = generateMarkdown(data);
-        console.log(markdown);
+        props.setMarkdown(markdown);
+        props.setPage('output');
     };
 
     return (

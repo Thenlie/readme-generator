@@ -1,14 +1,33 @@
 import * as React from 'react';
-import { InputScreen } from './screens';
+import { InputScreen, OutputScreen } from './screens';
+import { useState } from 'react';
 
 const App = () => {
+    const [page, setPage] = useState('input');
+    const [markdown, setMarkdown] = useState('');
+
     return (
         <>
             <nav>
                 <h1>Readme Generator!</h1>
+                <button
+                    onClick={() => {
+                        switch (page) {
+                            case 'input':
+                                setPage('output');
+                                break;
+                            case 'output':
+                                setPage('input');
+                                break;
+                        }
+                    }}
+                >
+                    {page === 'input' ? 'Output' : 'Input'}
+                </button>
                 <p>🚧 Site currently under construction! 🚧</p>
             </nav>
-            <InputScreen />
+            {page === 'input' && <InputScreen setPage={setPage} setMarkdown={setMarkdown} />}
+            {page === 'output' && <OutputScreen markdown={markdown} />}
             <footer>
                 <p>© Created by Thenlie</p>
                 <a href='https://github.com/Thenlie/readme-generator'>

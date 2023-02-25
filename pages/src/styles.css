@@ -87,3 +87,8 @@ footer {
 footer a:focus-visible {
     outline: 1px auto var(--secondary-text);
 }
+
+.w-md-editor-text-input {
+    -webkit-text-fill-color: var(--primary-text);
+    font-weight: 500;
+}
