@@ -1,26 +1,44 @@
 import * as React from 'react';
-import { TextArea, TextInput } from './components';
-import Button from './components/Button/Button';
+import { InputScreen, OutputScreen } from './screens';
+import { useState } from 'react';
 
 const App = () => {
+    const [page, setPage] = useState('input');
+    const [markdown, setMarkdown] = useState('');
+
     return (
         <>
             <nav>
                 <h1>Readme Generator!</h1>
+                <button
+                    onClick={() => {
+                        switch (page) {
+                            case 'input':
+                                setPage('output');
+                                break;
+                            case 'output':
+                                setPage('input');
+                                break;
+                        }
+                    }}
+                >
+                    {page === 'input' ? 'Output' : 'Input'}
+                </button>
                 <p>🚧 Site currently under construction! 🚧</p>
             </nav>
-            <main>
-                <TextInput placeholder='Project Title' name='title' />
-                <TextInput placeholder='GitHub Username' name='username' />
-                <TextInput placeholder='Email' name='email' />
-                <TextArea placeholder='Project Description' name='description' />
-                <TextArea placeholder='Installation Steps' name='install' />
-                <TextArea placeholder='Usage Instructions' name='usage' />
-                <TextArea placeholder='Testing' name='testing' />
-                <Button name='submit' content='Generate Readme' />
-            </main>
+            {page === 'input' && <InputScreen setPage={setPage} setMarkdown={setMarkdown} />}
+            {page === 'output' && <OutputScreen markdown={markdown} />}
             <footer>
                 <p>© Created by Thenlie</p>
+                <a href='https://github.com/Thenlie/readme-generator'>
+                    <img
+                        src='github-mark.svg'
+                        height={50}
+                        width={50}
+                        className='github-logo'
+                        alt='View project on GitHub'
+                    ></img>
+                </a>
             </footer>
         </>
     );

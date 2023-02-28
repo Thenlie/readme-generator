@@ -27,7 +27,7 @@ function renderLicenseBadge(license: string): string {
 
 // Function that returns the license link
 // If there is no license, return an empty string
-export function renderLicense(data: InputData): string {
+const renderLicense = (data: InputData): string => {
     const year = new Date().getFullYear();
     switch (data.license) {
         case 'Apache':
@@ -59,7 +59,7 @@ export function renderLicense(data: InputData): string {
         default:
             return '';
     }
-}
+};
 
 // Function that returns the license section of README
 // If there is no license, return an empty string
@@ -76,7 +76,7 @@ function renderLicenseSection(data: InputData) {
 }
 
 // Function to generate markdown for README
-export function generateMarkdown(data: InputData) {
+const generateMarkdown = (data: InputData) => {
     return `
   # ${data.title}  ${renderLicenseBadge(data.license)}
 
@@ -122,4 +122,6 @@ export function generateMarkdown(data: InputData) {
   >GitHub : [${data.user}](https://github.com/${data.user})
 
   `;
-}
+};
+
+export { generateMarkdown, renderLicense };

@@ -12,3 +12,8 @@ button {
 button:hover {
     background-color: var(--tertiary);
 }
+
+button:focus-visible {
+    outline: 1px auto var(--secondary-text);
+    background-color: var(--tertiary);
+}

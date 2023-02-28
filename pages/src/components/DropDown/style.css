@@ -1,0 +1,31 @@
+.drop-down-container {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.drop-down-container label {
+    padding-left: .5em;
+}
+
+select {
+    background-color: var(--primary);
+    color: var(--primary-text);
+    padding: 1em;
+    margin: .5em;
+    border-radius: .5em;
+}
+
+select:focus-visible {
+    outline: 1px auto var(--secondary-text);
+    background-color: var(--secondary);
+}
+
+option {
+    appearance: none;
+}
+
+option:focus-visible {
+    outline: none;
+    border: none;
+}
