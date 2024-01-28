@@ -45,11 +45,21 @@
 
   To run this program simply clone the repo from GitHub using the following command, 
   
-  ```
-  git clone git@github.com:Thenlie/readme-generator.git
+  ```bash
+  git clone git@github.com:Thenlie/readme-generator.git || git clone https://github.com/Thenlie/readme-generator.git
   ```
   
-  You can then use the command `npm install` to download the projects npm dependencies. Currently, that is Inquirer, TypeScript and Es-Lint. Once you have done that you are ready to compile the typescript. This can be done with the command `npm run build`. This will output JavaScript files to the `/dist` directory which are used by node. Finally, to run the application, use the command `npm start`. 
+  You can then use the command
+  
+  ```bash
+  npm install
+  ```
+  
+  to download the projects npm dependencies. Currently, that is Inquirer, TypeScript and Es-Lint. Once you have done that you are ready to compile the typescript. This can be done with the command `npm run build`. This will output JavaScript files to the `/dist` directory which are used by node. Finally, to run the application, use the command
+  
+  ```bash
+  npm start
+  ``` 
 
   > NOTE: If you make any code changes, be sure to run `npm run build` again.
 
