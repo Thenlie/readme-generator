@@ -1,5 +1,9 @@
-# README Generator  ![Project License Badge](https://img.shields.io/badge/license-GNU-brightgreen) ![Project Package Badge](https://img.shields.io/badge/package-Inquirer-informational) 
- 
+<h1 align="center">README Generator</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/license-GNU-brightgreen" alt="Project License Badge">
+  <img src="https://img.shields.io/badge/package-Inquirer-informational" alt="Project Package Badge">
+</p>
+
 <div align="center">
  
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
@@ -43,18 +47,12 @@ npx boiler-gen
 
 ***
 
-## Installation
+## Usage by cloning the repository
 
 #### Via CLI
     
 ```bash
-git clone git@github.com:Thenlie/readme-generator.git || git clone https://github.com/Thenlie/readme-generator.git
-```
-Then run,
-
-```bash
-cd readme-generator
-npm install
+git clone git@github.com:Thenlie/readme-generator.git || git clone https://github.com/Thenlie/readme-generator.git && cd readme-generator && npm install
 ```
 
 #### Via Zip file
@@ -78,9 +76,15 @@ After you are done with the installation process, run:
 npm start
 ``` 
 
-Now, you will be given a number of prompts to answer. Once you answer all of the questions the `README.md` file will be created in the `/out` folder of the project. This process can be seen in the GIF below. From there simply copy the README from the `/out` directory and paste it in your new project. 
+Now, you will be given a number of prompts to answer. Once you answer all of the questions the `README.md` file will be created in the `/out` folder of the project. This process can be seen in the GIF below. From there simply copy the README from the `/out` directory and paste it in your new project.
 
+
+> **NOTE:** If you make any code changes, be sure to run `npm run build` again.
+>
+> This will output JavaScript files to the `/dist` directory which are used by node. Finally, to run the application, use the command `npm start`. 
+  
 ## License
+
 <details>
 
 
