@@ -47,26 +47,16 @@ npx boiler-gen
 
 ***
 
-## Usage by cloning the repository
+## Installation
 
-#### Via CLI
-    
+Use the steps below to clone the repository and get the project running on your local machine.
+
+1. Navigate to the develop branch of the repository and click the green "Code" button. Then copy the repository URL with the method of your choosing. We suggest SSH which can be setup be following [these docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+2. Go to your terminal program of choice and navigate the the folder you want the project to live in. Then run the command below to clone the repository:
+
 ```bash
-git clone git@github.com:Thenlie/readme-generator.git || git clone https://github.com/Thenlie/readme-generator.git && cd readme-generator && npm install
+git clone <repository_url>
 ```
-
-#### Via Zip file
-
-1. Visit https://github.com/Thenlie/readme-generator.git.
-2. Click on the **Code** button then **Download Zip**.
-
-<p align="center">
-  <img src="assets/images/ssdownload.png" alt="Download Zip">
-</p>
-
-3. Extract the downloaded zip file to any directory you prefer.
-4. Open Terminal / Command Prompt at that Directory.
-5. Run `npm install` in the terminal.
 
 ## Usage
 
